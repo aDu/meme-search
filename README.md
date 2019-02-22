@@ -10,9 +10,22 @@ Currently grabs them from /r/memes subreddit (using the top results). No API key
 ```
 var memeSearch = require('meme-search')
 
+// args: keyword, callback
 memeSearch('chicken', (err, res) => {
     console.log(res) // Array of meme objects, each meme object of the format { title, image_url }
 })
+
+// args: keyword, ops, callback
+memeSearch(
+    'chicken',
+    {
+        'subreddit': 'dankmemes'
+    },
+    (err, res) => {
+    console.log(res) // Array of meme objects, each meme object of the format { title, image_url }
+})
 ```
+
+
 
 
