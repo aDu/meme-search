@@ -1,6 +1,6 @@
 {
   "name": "meme-search",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Given a keyword, returns random array of memes.",
   "main": "index.js",
   "scripts": {
