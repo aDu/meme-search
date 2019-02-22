@@ -1,8 +1,7 @@
 # meme-search
+Given a keyword, returns random array of memes.
 
 `npm i -S meme-search`
-
-Using a search term/keyword, gives you an array of random memes.
 
 Currently grabs them from /r/memes subreddit (using the top results). No API key needed.
 
