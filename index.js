@@ -6,9 +6,14 @@ module.exports = (keyword, ops, cb) => {
         ops = {}
     }
 
-    ops.subreddit = ops.subreddit || 'memes'
-    
-    let uri = encodeURI('https://www.reddit.com/r/memes/search.json?q='+(keyword)+'&restrict_sr=1&sort=top')
+    ops.subreddit = ops.subreddit || 'dankmemes'
+    ops.sort = ops.sort || 'relevance'
+
+    if (!keyword || keyword == "") keyword = "meme"
+
+    let uri = encodeURI(
+        `https://www.reddit.com/r/${ops.subreddit}/search.json?q=${keyword}&restrict_sr=1&sort=${ops.sort}`
+    )
     
     request({
         method: 'GET',
