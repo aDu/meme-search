@@ -6,6 +6,8 @@ module.exports = (keyword, ops, cb) => {
         ops = {}
     }
 
+    keyword = keyword.trim()
+    
     ops.subreddit = ops.subreddit || 'dankmemes'
     ops.sort = ops.sort || 'relevance'
 

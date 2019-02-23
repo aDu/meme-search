@@ -1,7 +1,7 @@
 {
   "name": "meme-search",
-  "version": "1.0.4",
-  "description": "Given a keyword, returns random array of memes.",
+  "version": "1.0.5",
+  "description": "Meme search via a keyword. Returns array of memes. No API key needed.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

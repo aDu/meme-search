@@ -1,5 +1,5 @@
 # meme-search
-Given a keyword, returns random array of memes.
+Meme search via a keyword. Returns array of memes. No API key needed.
 
 `npm i -S meme-search`
 
