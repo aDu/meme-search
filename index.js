@@ -1,22 +1,24 @@
 const request = require('request')
 
 module.exports = (keyword, ops, cb) => {
+    // Preprocess arguments
     if (!cb) {
         cb = ops
         ops = {}
     }
 
-    keyword = keyword.trim()
-    
+    if (keyword) keyword = keyword.trim()
+
     ops.subreddit = ops.subreddit || 'dankmemes'
     ops.sort = ops.sort || 'relevance'
 
     if (!keyword || keyword == "") keyword = "meme"
 
+    // Generate the URI containing the meme posts from Reddit
     let uri = encodeURI(
         `https://www.reddit.com/r/${ops.subreddit}/search.json?q=${keyword}&restrict_sr=1&sort=${ops.sort}`
     )
-    
+
     request({
         method: 'GET',
         uri
